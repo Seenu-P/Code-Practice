@@ -1,0 +1,20 @@
+import operator
+import functools
+def re_array(lst):
+    i_array= lst
+    l=[]
+    s=[]
+    for i in i_array:
+        for j in i_array:
+            if i!=j:
+                s.append(j)
+        y= functools.reduce(operator.mul,s)
+                        
+        l.append(y)
+        s.clear()
+    return l
+
+
+i_lst = [3, 2, 1]
+o = re_array(i_lst)
+print(o)
